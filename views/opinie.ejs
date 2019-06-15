@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Moon Travel | Opinie</title>
+    <link rel="stylesheet" href="/css/master.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+      <ul class="menu wrap">
+        <li>
+          <a href="index" class="close">&#10005;</a>
+        </li>
+        <li>
+          <a href="oferta" class="inactive">OFERTA</a>
+        </li>
+        <li>
+          <a href="galeria" class="inactive">GALERIA</a>
+        </li>
+        <li>
+          <a href="opinie" class="active">OPINIE</a>
+        </li>
+        <li>
+          <a href="dokumentacja" class="inactive">DOKUMENTACJA</a>
+        </li>
+      </ul>
+    </header>
+
+    <section>
+      <div id="reviews" class="wrap">
+
+        <h1 class="reviews-h1">OPINIE</h1>
+
+        <div class="review-form">
+          <form class="review-add" action="/addReview" method="post">
+            <input class="review-name" type="text" name="newName" placeholder="Imię" required>
+            <input class="review-surname" type="text" name="newSurname" placeholder="Nazwisko">
+
+            <textarea class="review-tresc" name="newReview" rows="8" cols="80" placeholder="Tresc" required></textarea>
+
+            <div class="review-gender">
+              <input type="radio" name="newGender" value="Male" checked>Male
+              <input type="radio" name="newGender" value="Female">Female
+              <input type="radio" name="newGender" value="Other">Other
+            </div>
+            <input class="review-submit" type="submit" name="" value="Prześlij">
+          </form>
+        </div>
+
+        <% newListReviews.forEach(function(review){ %>
+          <div class="reviews-box">
+
+            <div class="review-header" style=" <%= review.gender %> ">
+              <p class="review-author"> <%= review.name %> <br> <%= review.surname %> </p>
+              <br>
+              <p class="review-date"> <%= review.date %> </p>
+            </div>
+
+            <p class="review-review"> <%= review.review %> </p>
+          </div>
+        <%  }) %>
+
+      </div>
+    </section>
+
+  </body>
+  <script src="/js/master.js" charset="utf-8"></script>
+</html>

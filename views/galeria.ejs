@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Moon Travel | Galeria</title>
+    <link rel="stylesheet" href="/css/master.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+      <ul class="menu">
+        <li>
+          <a href="index" class="close">&#10005;</a>
+        </li>
+        <li>
+          <a href="oferta" class="inactive">OFERTA</a>
+        </li>
+        <li>
+          <a href="galeria" class="active">GALERIA</a>
+        </li>
+        <li>
+          <a href="opinie" class="inactive">OPINIE</a>
+        </li>
+        <li>
+          <a href="dokumentacja" class="inactive">DOKUMENTACJA</a>
+        </li>
+      </ul>
+    </header>
+
+    <section>
+      <div id="galeria" class="wrap">
+
+        <h1 class="galeria-h1">GALERIA</h1>
+
+        <% newListImages.forEach(function(image){ %>
+          <div class="img-box">
+            <img class="img" src=" <%= image.img %> " alt="image">
+            <div class="desc">
+              <h1> <%= image.title %> </h1>
+              <p> <%= image.desc %> </p>
+            </div>
+          </div>
+        <%  }) %>
+
+      </div>
+    </section>
+
+  </body>
+  <script src="/js/master.js" charset="utf-8"></script>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Moon Travel | Dokumentacja</title>
+    <link rel="stylesheet" href="/css/master.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+      <ul class="menu">
+        <li>
+          <a href="index" class="close">&#10005;</a>
+        </li>
+        <li>
+          <a href="oferta" class="inactive">OFERTA</a>
+        </li>
+        <li>
+          <a href="galeria" class="inactive">GALERIA</a>
+        </li>
+        <li>
+          <a href="opinie" class="inactive">OPINIE</a>
+        </li>
+        <li>
+          <a href="dokumentacja" class="active">DOKUMENTACJA</a>
+        </li>
+      </ul>
+    </header>
+
+    <section>
+      <div id="dokumentacja" class="wrap">
+
+        <h1>Użyte technologie:</h1>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JS</li>
+          <li>NodeJS</li>
+          <li>MongoDB</li>
+        </ul>
+        <h1>Frontend:</h1>
+        <ul>
+          <li>flex</li>
+          <li>grid</li>
+          <li>canvas</li>
+          <li>google fonts</li>
+        </ul>
+        <h1>Backend:</h1>
+        <ul>
+          <li>express - framework do nodejsa.</li>
+          <li>body-parser - umożliwia korzystanie z np "req.body.NAZWA".</li>
+          <li>ejs - odpowiada za przekazywanie danych z serwera do klienta.</li>
+          <li>mongoose - framework do bazy danych MongoDB.</li>
+          <li>dotenv - umożliwia ukrycie wrażliwych danych w osobnym pliku i odwołanie się do nich za pomocą "process.env.NAZWA".</li>
+        </ul>
+        <h1>Struktura projektu:</h1>
+        <ul>
+          <li>node-modules</li>
+          <li>public
+            <ul>
+              <li>css
+                <ul>
+                  <li>master.css</li>
+                </ul>
+              </li>
+              <li>img
+                <ul>
+                  <li>galaxy.jpg</li>
+                  <li>image0</li>
+                  <li>image1</li>
+                  <li>image2</li>
+                  <li>image3</li>
+                  <li>image4</li>
+                  <li>image5</li>
+                </ul>
+              </li>
+              <li>js
+                <ul>
+                  <li>canvas.js</li>
+                  <li>master.js</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>views
+            <ul>
+              <li>dokumentacja.ejs</li>
+              <li>galeria</li>
+              <li>index</li>
+              <li>oferta</li>
+              <li>opinie</li>
+            </ul>
+          </li>
+          <li>.env</li>
+          <li>app.js</li>
+          <li>package-lock.json</li>
+          <li>package.json</li>
+        </ul>
+        <h1>Pobieranie obrazków z bazy danych:</h1>
+        <p>Obrazki znajdują się na serwerze w folderze img, w bazie danych znajduje się dokument JSON przypisany do każdego z obrazków wraz z nazwą, opisem i adresem url. Po wejściu na stronę galerii wysyłane jest żądanie app.getem do bazy danych, którego wynik jest wysyłany do klienta. Obrazki wyświtlane są przy pomocy metody forEach oraz EJS.</p>
+        <h1>Wysyłanie wiadomości:</h1>
+        <p>Wysyłanie wiadomości odbywa się za pomocą formularza, który przekazuje dane do serwera poprzez app.post, dane te są wówczas analizowane i przekształcane do formatu JSON a nastepnie mongoosową metodą .save() wysyłane do bazy danych.</p>
+        <h1>Dodawanie i wyświetlanie opinii:</h1>
+        <p>Dodawanie opinii odbywa się w taki sam sposób jak wysyłanie wiadomości.<br>Następuje wówczas przeładowanie strony oraz wyświetlenie wszystkich opinii znajdujących się w bazie danych na zasadzie podobnej do listowania obrazków (również metodą forEach).</p>
+
+      </div>
+    </section>
+
+  </body>
+  <script src="/js/master.js" charset="utf-8"></script>
+</html>

@@ -1,0 +1,524 @@
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+body {
+  background-color: rgba(242,242,242,0.7);
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+#canvas {
+  background-color: black;
+  display: block;
+}
+
+      .welcome {
+        position: absolute;
+        display: inline-block;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        color: white;
+      }
+
+      .btn {
+        cursor: pointer;
+        width: auto;
+        color: white;
+        font-size: 1em;
+        text-decoration: none;
+        border: 3px solid white;
+        border-radius: 10px;
+        background-color: rgba(0,0,0,0);
+        padding: 10px;
+      }
+
+      .btn:hover {
+        background-image: linear-gradient(-45deg, tomato, orange);
+      }
+
+
+header {
+  z-index: 1;
+  background-color: #1e1e1e;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+      .menu {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        height: 49px;
+        z-index: 0;
+        margin: auto;
+        width: 860px;
+      }
+
+      .menu li {
+        display: inline-block;
+      }
+
+      .menu li a {
+        text-decoration: none;
+        color: white;
+        margin: 0;
+        line-height: 1.5em;
+        padding: 15px 20px;
+      }
+
+      .close {
+        background-color: black;
+      }
+
+      .close:hover {
+        background: linear-gradient(45deg, #8C1500, #FFBF47);
+      }
+
+      .active {
+        background: linear-gradient(45deg, violet, slateblue);
+      }
+
+      .active:hover {
+        background: linear-gradient(45deg, violet, slateblue);
+      }
+
+      .inactive {
+        background-color: #1e1e1e;
+      }
+
+      .inactive:hover {
+        background: linear-gradient(45deg, dodgerblue, mediumseagreen);
+      }
+
+#galeria {
+  background-color: #262626;
+  box-sizing: border-box;
+  padding: 20px;
+  padding-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+      .galeria-h1 {
+        color: white;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+      }
+
+      .img-box {
+        margin-top: 1%;
+        background-color: white;
+        border-radius: 30px;
+        border: 2px solid white;
+        display: inline-block;
+        height: auto;
+        max-width: 30%;
+      }
+
+      .img {
+        width: 100%;
+        border-radius: 30px;
+        filter: grayscale(100%);
+      }
+
+      .img:hover {
+        filter: grayscale(0);
+      }
+
+      .desc {
+        text-align: center;
+      }
+
+      .desc h1 {
+        margin: 0;
+        font-size: 1.5em;
+      }
+
+#features {
+  margin-top: 49px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 1em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: white;
+  padding-bottom: 40px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: #262626;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+}
+
+      #features ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      #features li {
+        padding: 20px;
+        line-height: 1em;
+        max-height: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .features-list {
+        display: inline-block;
+        margin: 0;
+      }
+
+      .features-list li {
+        background-color: #ECECEC;
+        border-top: 1px solid white;
+        border-bottom: 1px solid #bababa;
+        border-left: 0;
+        border-right: 1px solid #bababa;
+        text-align: right;
+      }
+
+      .features-list li:first-child {
+        display: none;
+        background: none;
+        border: 0;
+      }
+
+      .features-list li:nth-child(2) {
+        border-top-left-radius: 10px;
+      }
+
+      .features-list li:last-child {
+        border-bottom-left-radius: 10px;
+        border-bottom: 0;
+      }
+
+      .features-basic {
+        display: inline-block;
+        width: 150px;
+        margin: 0;
+      }
+
+      .features-basic li {
+        background-color: #d8d8d8;
+        border-top: 1px solid white;
+        border-bottom: 1px solid #bababa;
+        border-left: 1px solid white;
+        border-right: 1px solid #bababa;
+      }
+
+      .features-basic li:first-child {
+        background-color: #324960;
+        border-top-left-radius: 10px;
+        border: 0;
+        color: white;
+      }
+
+      .features-basic li:last-child {
+        border-bottom: 0;
+      }
+
+      .features-premium {
+        display: inline-block;
+        margin: 0;
+        width: 150px;
+      }
+
+      .features-premium li {
+        background-color: #DCEEBE;
+        border-top: 1px solid white;
+        border-bottom: 1px solid #bababa;
+        border-left: 1px solid white;
+      }
+
+      .features-premium li:first-child {
+        background: #4FC3A1;
+        border-top-right-radius: 10px;
+        border: 0;
+        color: white;
+      }
+
+      .features-premium li:last-child {
+        border-bottom-right-radius: 10px;
+        border-bottom: 0;
+      }
+
+      .circle-red {
+        background-color: tomato;
+        display: inline-block;
+        padding: 5px;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        color: white;
+        line-height: 20px;
+      }
+
+      .circle-green {
+        background-color: mediumseagreen;
+        display: inline-block;
+        padding: 5px;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        color: white;
+        line-height: 20px;
+      }
+
+#contact {
+  padding: 30px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  background-color: #D8D8D8;
+  border-radius: 30px;
+}
+
+      .contact-h1 {
+        margin: 0;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .contact-form {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 75% auto;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+          "text name"
+          "text surname"
+          "text submit"
+      }
+
+      .contact-name {
+        grid-area: name;
+        max-height: 16px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid gray;
+      }
+
+      .contact-surname {
+        grid-area: surname;
+        max-height: 16px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid gray;
+      }
+
+      .contact-text {
+        grid-area: text;
+        resize: none;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid gray;
+      }
+
+      .contact-submit {
+        grid-area: submit;
+        background-color: #ECECEC;
+        border-radius: 10px;
+        border: 2px solid gray;
+        cursor: pointer;
+      }
+
+#reviews {
+  padding-top: 70px;
+}
+
+      .reviews-h1 {
+        margin: 0;
+        text-align: center;
+      }
+
+      .review-form {
+        box-sizing: border-box;
+        padding: 30px;
+        margin: 20px;
+        box-sizing: border-box;
+        background-color: #D8D8D8;
+        border-radius: 30px;
+      }
+
+      .review-add {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 70% auto;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+          "rev-text rev-name"
+          "rev-text rev-surname"
+          "rev-text rev-gender"
+          "rev-text rev-submit"
+      }
+
+      .review-name {
+        grid-area: rev-name;
+        max-height: 16px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid gray;
+      }
+
+      .review-surname {
+        grid-area: rev-surname;
+        max-height: 16px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid gray;
+      }
+
+      .review-tresc {
+        grid-area: rev-text;
+        resize: none;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid gray;
+      }
+
+      .review-gender {
+        grid-area: rev-gender;
+        max-height: 16px;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .review-submit {
+        grid-area: rev-submit;
+        background-color: #ECECEC;
+        border-radius: 10px;
+        border: 2px solid gray;
+        cursor: pointer;
+      }
+
+      .review-submit:hover {
+        background-image: linear-gradient(-45deg, tomato, orange);
+      }
+
+      .reviews-box {
+        background-color: white;
+        margin: 20px;
+        border-radius: 20px;
+        display: flex;
+      }
+
+      .review-header {
+        min-width: 85px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        padding: 10px;
+        color: white;
+        text-align: center;
+      }
+
+      .review-author {
+        display: inline;
+        margin: 0;
+        font-size: 16px;
+      }
+
+      .review-date {
+        display: inline;
+        margin: 0;
+        font-size: 12px;
+        line-height: 2em;
+      }
+
+      .review-review {
+        padding: 20px;
+        padding-top: 0;
+      }
+
+#dokumentacja {
+  box-sizing: border-box;
+  background-color: white;
+  padding: 20px;
+  padding-top: 70px;
+}
+
+      #dokumentacja h1 {
+        margin: 0;
+        font-size: 2em;
+      }
+
+.wrap {
+  margin: auto;
+  width: 860px;
+}
+
+@media screen and (max-width: 800px) {
+  .wrap {
+    width: 100%;
+  }
+
+  .img-box {
+    max-width: 45%;
+  }
+
+  .img {
+    filter: grayscale(0);
+  }
+
+  .contact-form {
+    grid-template-columns: 100%;
+    grid-template-rows: 40px 40px 200px 40px;
+    grid-template-areas:
+      "name"
+      "surname"
+      "text"
+      "submit"
+  }
+
+  .contact-submit {
+    margin: auto;
+    width: 100px;
+  }
+
+  .review-add {
+    grid-template-columns: 100%;
+    grid-template-rows: 40px 40px 40px 200px 40px;
+    grid-template-areas:
+      "rev-name"
+      "rev-surname"
+      "rev-gender"
+      "rev-text"
+      "rev-submit"
+  }
+
+  .review-submit {
+    margin: auto;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrap {
+    width: 100%;
+  }
+
+  .img-box {
+    max-width: 95%;
+    margin-top: 20px;
+  }
+
+  .img {
+    filter: grayscale(0);
+  }
+}
