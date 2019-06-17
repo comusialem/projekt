@@ -114,8 +114,6 @@ app.post('/contact', function(request, response){
   console.log("Wysłano nową wiadomosc!");
 });
 
-//nazwa bazy danych: mo1325_ti
-//hasło bazy danych: Panda3
 mongoose.connect(url, {useNewUrlParser: true}, function(err){
   if (err) {
     throw (err);
